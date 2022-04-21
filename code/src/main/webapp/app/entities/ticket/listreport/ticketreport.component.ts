@@ -8,7 +8,7 @@ import { TicketDeleteDialogComponent } from '../delete/ticket-delete-dialog.comp
 
 @Component({
   selector: 'jhi-ticket',
-  templateUrl: './ticket.component.html',
+  templateUrl: './ticketreport.component.html',
 })
 export class TicketReportComponent implements OnInit {
   tickets?: ITicket[];
@@ -19,7 +19,7 @@ export class TicketReportComponent implements OnInit {
   loadAll(): void {
     this.isLoading = true;
 
-    this.ticketService.query().subscribe({
+    this.ticketService.queryreport().subscribe({
       next: (res: HttpResponse<ITicket[]>) => {
         this.isLoading = false;
         this.tickets = res.body ?? [];

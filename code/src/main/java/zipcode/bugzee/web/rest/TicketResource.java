@@ -180,16 +180,16 @@ public class TicketResource {
         return ticketRepository.findByAssignedToIsCurrentUser();
     }
 
-    /**
-     * {@code GET  /tickets/report} : get all the tickets assigned to user.
-     *
-     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of tickets reported to user in body.
-     */
-    @GetMapping("/tickets/report")
-    public List<Ticket> getAllReportedTickets() {
-        log.debug("REST request to get all findByReportedByIsCurrentUser");
-        return ticketRepository.findByReportedByIsCurrentUser();
-    }
+        /**
+         * {@code GET  /tickets/report} : get all the tickets assigned to user.
+         *
+         * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of tickets reported to user in body.
+         */
+        @GetMapping("/tickets/report")
+        public List<Ticket> getAllReportedTickets() {
+            log.debug("REST request to get all findByReportedByIsCurrentUser");
+            return ticketRepository.findByReportedByIsCurrentUser();
+        }
 
     /**
      * {@code GET  /tickets/:id} : get the "id" ticket.

@@ -13,6 +13,15 @@ Adding a Assigned Bugs list page.
 - modified `code/src/main/webapp/app/entities/ticket/ticket.module.ts` adding TicketUserComponent
 - added to `code/src/main/webapp/app/entities/ticket/route/ticket-routing.module.ts` items for `assign` option.
 
+Adding a Assigned Bugs list page.
+- copied `list/` folder of components to `listreported/`.
+- change all `TicketComponent` to `TicketReportComponent`
+- added the API call in the back end to  `TicketResource` by findByReportedByIsCurrentUser
+- added to `TicketService` `queryreport(req?: any): Observable<EntityArrayResponseType>`
+- added a link to the Home component
+- modified `code/src/main/webapp/app/entities/ticket/ticket.module.ts` adding TicketReportComponent
+- added to `code/src/main/webapp/app/entities/ticket/route/ticket-routing.module.ts` items for `report` option.
+
 This application was generated using JHipster 7.8.1, you can find documentation and help at [https://www.jhipster.tech](https://www.jhipster.tech).
 
 ## Project Structure

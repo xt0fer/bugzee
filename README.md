@@ -2,6 +2,8 @@
 
 # Notes By Kris
 
+Modify the records to have a couple bugs which are assigned and reported by admin.
+
 Adding a Assigned Bugs list page.
 - copied `list/` folder of components to `listuser/`.
 - change all `TicketComponent` to `TickerUserComponent`

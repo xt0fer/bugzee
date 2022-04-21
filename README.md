@@ -2,8 +2,14 @@
 
 # Notes By Kris
 
-- had to install `npm install -g @angular/cli` to get the ng command to work.
-- did a `ng generate component tix` to start on creating a comp which shows the currentUser's tickets.
+Adding a Assigned Bugs list page.
+- copied `list/` folder of components to `listuser/`.
+- change all `TicketComponent` to `TickerUserComponent`
+- added the API call in the back end to  `TicketResource` by findByAssignedToIsCurrentUser
+- added to `TicketService` `queryassign(req?: any): Observable<EntityArrayResponseType>`
+- added a link to the Home component
+- modified `code/src/main/webapp/app/entities/ticket/ticket.module.ts` adding TicketUserComponent
+- added to `code/src/main/webapp/app/entities/ticket/route/ticket-routing.module.ts` items for `assign` option.
 
 This application was generated using JHipster 7.8.1, you can find documentation and help at [https://www.jhipster.tech](https://www.jhipster.tech).
 

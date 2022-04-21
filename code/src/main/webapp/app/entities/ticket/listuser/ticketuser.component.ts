@@ -10,7 +10,7 @@ import { TicketDeleteDialogComponent } from '../delete/ticket-delete-dialog.comp
   selector: 'jhi-ticket',
   templateUrl: './ticketuser.component.html',
 })
-export class TicketComponent implements OnInit {
+export class TicketUserComponent implements OnInit {
   tickets?: ITicket[];
   isLoading = false;
 

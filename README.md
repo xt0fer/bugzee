@@ -2,6 +2,10 @@
 
 # Notes By Kris
 
+_Once you generate a JHIPSTER project, how do you modify it to restrict certain entities related to a `User` onto a new page in the front-end?_
+
+This is a common enough need in many ZipCode Spring projects.
+
 ## Generating the Code
 
 JHIPSTER is good at generating a large amount of code on top of the Spring App engine. 

@@ -2,6 +2,30 @@
 
 # Notes By Kris
 
+## Generating the Code.
+
+JHIPSTER is good at generating a large amount of code on top of the Spring App engine. 
+It will produce a good starter project and allows you, with the help of the entity generating machinery, to customize it to your project's domain of objects.
+
+### JDL - a useful addition for working at a high level.
+
+JHIPSTER's JDL machinery can generate alrge amount of useful backend REST API code for a series of Entities (the objects that you model in your app).
+This project __Bugzee__, it meant to be an example of a simple Issue Tracking app, where `Tickets` are used to track issues related to some `Project`.
+`Tickets` can be `ReportedBy` and `AssignedTo` a given `User`.
+(Look at the [jhipster-jdl-diagram](./jhipster-jdl-diagram.png) for a visual of the Entity-Relationship Diagram (a specialized UML)).
+
+![jhipster-jdl-diagram](./jhipster-jdl-diagram.png)
+
+### Adding a "restricted" view of Tickets
+
+A common milestone early in a project, is to restrict some items from the db by showing only those items "owned" by a User.
+
+JHIPSTER will produce a CRUD interface in the front-end that allows you access to the entities you add to the project with your JDL file.
+The problem is, those pages show _all_ the Tickets (in this case Tickets are the entity which track "bugs") to a user, and while one can sort via a column, it's less than ideal.
+So, we need pages which will show a User the Tickets that have been `AssignedTo` them and to show the Tickets which the User has `ReportedBy`. 
+In this project, showing the User the Tickets they have been `AssignedTo` (and only those) is the first task in this. 
+The second is to mimic the first set of changes to show the user only the Tickets which have been `ReportedBy` them.
+
 Modify the records to have a couple bugs which are assigned and reported by admin.
 
 Adding a Assigned Bugs list page.
